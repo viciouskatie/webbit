@@ -1,0 +1,17 @@
+import Rails from 'rails-ujs'
+Rails.start()
+
+import * as ActiveStorage from 'activestorage'
+ActiveStorage.start()
+
+import Turbolinks from 'turbolinks'
+Turbolinks.start()
+Turbolinks.setProgressBarDelay(50)
+
+import {
+  Application
+} from "stimulus"
+import {
+  definitionsFromContext
+} from "stimulus/webpack-helpers"
+import "./../stylesheets/application.scss"

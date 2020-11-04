@@ -1,5 +1,16 @@
 {
   "name": "webbit",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "@rails/webpacker": "4.3.0",
+    "activestorage": "^5.2.4-4",
+    "rails-erb-loader": "^5.5.2",
+    "rails-ujs": "^5.2.4-4",
+    "stimulus": "^1.1.0",
+    "tailwindcss": "^0.0.0-658250a96",
+    "turbolinks": "^5.2.0"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^3.11.0"
+  }
 }
