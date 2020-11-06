@@ -64,7 +64,7 @@
 
         <div class="w-full flex flex-wrap flex-1 items-center justify-end pt-4 lg:pt-0">
           <div class="mr-3">
-            <% if user_signed_in? %>
+            <% if !user_signed_in? %>
                 <%= link_to new_submission_path do %>
                   <% render_svg "icons/create" %>
                 <% end %>
