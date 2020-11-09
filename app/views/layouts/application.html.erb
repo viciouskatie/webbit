@@ -64,7 +64,10 @@
 
         <div class="w-full flex flex-wrap flex-1 items-center justify-end pt-4 lg:pt-0">
           <div class="mr-3">
-            <% if !user_signed_in? %>
+            <% if user_signed_in? %>
+            <%= link_to destroy_user_session_path, class: "hover:bg-purple-500 hover:text-white text-gray-700 no-underline block py-2 px-4 flex items-center text-sm" do %>
+              <% render_svg "icons/signout", styles: "icon-md fill-current text-gray-600 mr-3" %>Sign Out
+             <% end %>
                 <%= link_to new_submission_path do %>
                   <% render_svg "icons/create" %>
                 <% end %>
@@ -95,12 +98,6 @@
                 <li>
                    <%= link_to edit_user_registration_path, class: "hover:bg-purple-500 hover:text-white text-gray-700 no-underline block py-2 px-4 flex items-center text-sm" do %>
                    <% render_svg "icons/settings", styles: "icon-md fill-current text-gray-600 mr-3" %>Account Settings
-                  <% end %>
-                </li>
-
-                <li>
-                   <%= link_to destroy_user_session_path, class: "hover:bg-purple-500 hover:text-white text-gray-700 no-underline block py-2 px-4 flex items-center text-sm" do %>
-                   <% render_svg "icons/signout", styles: "icon-md fill-current text-gray-600 mr-3" %>Sign Out
                   <% end %>
                 </li>
                </ul> 
