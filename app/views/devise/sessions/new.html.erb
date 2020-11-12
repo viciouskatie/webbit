@@ -1,5 +1,5 @@
 <% content_for :devise_form do %>
-  <h2 class="heading text-4xl font-bold pt-4 mb-8">Login</h2>
+  <h2 class="heading text-4xl font-bold pt-4 mb-8">Log in</h2>
   
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="mb-6">
@@ -15,7 +15,7 @@
   <% if devise_mapping.rememberable? %>
     <div class="mb-6 flex">
       <%= f.check_box :remember_me, class: "mr-2 leading-tight" %>
-      <%= f.label :remember_me, class: "block text-gray-darker" %>
+      <%= f.label :remember_me, class: "block text-gray-700" %>
     </div>
   <% end %>
 
