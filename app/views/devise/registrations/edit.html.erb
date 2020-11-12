@@ -15,9 +15,9 @@
   </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :username %>
-    <%= f.text_field :username, autofocus: true %>
+  <div class="mb-6">
+    <%= f.label :username, class: "label" %>
+    <%= f.username_field :username, autofocus: true, autocomplete: "username", class: "input" %>
   </div>
 
   <div class="mb-6">
@@ -43,14 +43,12 @@
     <%= f.submit "Update", class: "btn btn-purple" %>
   </div>
 <% end %>
-
 <hr class="border mt-6 mb-3"/>
 <h3 class="heading text-xl font-bold mb-4">Cancel my account</h3>
-
 <div class="flex justify-between items-center">
 <div class="flex-1"><p class="py-4">Unhappy?</p></div>
 <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "btn btn-small btn-white text-sm mr-2" %>
 </div>
-
 <% end %>
+
 <%= render "devise/shared/form_wrap" %>
