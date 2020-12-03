@@ -22,7 +22,7 @@
     @apply text-gray-600 mr-4 fill-current;
 }
 
-.tabs .tab svg{
+.tabs li.active .tab svg {
     @apply text-white;
 }
 
